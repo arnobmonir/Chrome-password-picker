@@ -5,8 +5,11 @@ url = ' http://192.168.100.12/test/Pascol.exe'
 
 
 def download(url):
-    urllib.request.urlretrieve(url, 'Pascol.exe')
-    return True
+    try:
+        urllib.request.urlretrieve(url, 'Pascol.exe')
+        return True
+    except:
+        return False
 
 
 if download(url):
